@@ -9,7 +9,7 @@ public class 숫자뒤집기Test {
 
     @Test
     void result() {
-        assertThat(숫자뒤집기.solution(42)).isEqualTo(24);
+        assertThat(숫자뒤집기.solution(1132)).isEqualTo(2311);
     }
 }
 
