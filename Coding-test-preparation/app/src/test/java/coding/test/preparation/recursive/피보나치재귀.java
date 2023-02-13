@@ -4,13 +4,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-// 피보나치 수열을 출력한다.
+// 피보나치 수열(=메모이제이션)을 출력한다.
 public class 피보나치재귀 {
     public int solution(int n) {
-        if (n == 0) return 0;
-        if (n == 1) return 1;
+        int[] fibo = new int[n + 1];
+        if (n == 1) return fibo[n] = 1;
+        if (n == 2) return fibo[n] = 1;
 
-        return solution(n - 1) + solution(n - 2);
+        return fibo[n] = solution(n - 2) + solution(n - 1);
     }
 
     @Test
